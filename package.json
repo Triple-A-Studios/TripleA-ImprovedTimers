@@ -5,8 +5,8 @@
     "displayName": "TripleA-ImprovedTimers",
     "unity": "2021.3",
     "documentationUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
-    "changelogUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
-    "licenseUrl": "https://github.com/Triple-A-Studios/TripleA-Utils.git",
+    "changelogUrl": "https://github.com/Triple-A-Studios/TripleA-ImprovedTimers/blob/main/CHANGELOG.md",
+    "licenseUrl": "https://github.com/Triple-A-Studios/TripleA-ImprovedTimers/blob/main/LICENSE",
     "dependencies": {},
     "keywords": [
         "Timers",

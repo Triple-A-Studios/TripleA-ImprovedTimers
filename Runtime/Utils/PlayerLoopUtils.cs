@@ -5,7 +5,7 @@ using UnityEngine.LowLevel;
 
 namespace TripleA.Utils
 {
-	public static class PlayerLoopUtils
+	internal static class PlayerLoopUtils
 	{
 		/// <summary>
 		///     Inserts a new subsystem into the given Unity Player Loop at the given index.
@@ -14,7 +14,7 @@ namespace TripleA.Utils
 		/// <param name="loop">The player loop to insert into.</param>
 		/// <param name="systemToInsert">The subsystem to insert.</param>
 		/// <param name="index">The index at which to insert the subsystem.</param>
-		public static bool InsertSystem<T>(ref PlayerLoopSystem loop, in PlayerLoopSystem systemToInsert, int index)
+		internal static bool InsertSystem<T>(ref PlayerLoopSystem loop, in PlayerLoopSystem systemToInsert, int index)
 		{
 			if (loop.type != typeof(T)) return HandleSubSystemLoopForInsertion<T>(ref loop, systemToInsert, index);
 			var playerLoopSystemList = new List<PlayerLoopSystem>();
@@ -29,7 +29,7 @@ namespace TripleA.Utils
 		///     Prints the Unity Player Loop to the console as a tree.
 		/// </summary>
 		/// <param name="playerLoop">The current player loop.</param>
-		public static void PrintPlayerLoop(PlayerLoopSystem playerLoop)
+		internal static void PrintPlayerLoop(PlayerLoopSystem playerLoop)
 		{
 			StringBuilder sb = new();
 			sb.AppendLine("Unity Player Loop");
@@ -37,7 +37,7 @@ namespace TripleA.Utils
 			Debug.Log(sb.ToString());
 		}
 
-		public static void RemoveSystem<T>(ref PlayerLoopSystem loop, in PlayerLoopSystem subSystemToRemove)
+		internal static void RemoveSystem<T>(ref PlayerLoopSystem loop, in PlayerLoopSystem subSystemToRemove)
 		{
 			if (loop.subSystemList == null) return;
 
